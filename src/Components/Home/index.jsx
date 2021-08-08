@@ -31,6 +31,7 @@ class Home extends React.Component {
         })
         return(
         <div className="container-fluid" style={{background:"lightpink"}}>
+            <h2>Album</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4 mx-auto">    
             {posts}
         </div>
