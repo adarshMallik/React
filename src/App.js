@@ -10,6 +10,7 @@ import Client from "./Containers/Client"
 import Blog from "./Containers/Blog"
 import Contact from "./Components/Contact"
 import Footer from "./Components/Footer"
+import Products from "./Components/Products"
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/service" component={Service} exact></Route>
           <Route path="/client" component={Client} exact></Route>
           <Route path="/blog" component={Blog} exact></Route>
+          <Route path="/product" component={Products} exact></Route>
           <Route path="/contact" component={Contact} exact></Route>
         </Switch>
         <Footer/>

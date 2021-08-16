@@ -27,6 +27,7 @@ class Blogs extends React.Component {
         },
       ],
       users: [],
+      date: new Date(),
     };
   }
   componentDidMount() {
@@ -100,8 +101,22 @@ class Blogs extends React.Component {
 
       axios.delete("https://jsonplaceholder.typicode.com/users/1").then((res) => {
         console.log(res)
-      })
+      });
+
+      this.timerID = setInterval(() => this.tick(),1000)
   }
+
+  componentWillUnmount(){
+    clearInterval(this.timerID);
+  }
+
+  tick(){
+    this.setState({
+        date: new Date()
+    });
+    console.log(this.state.date)
+  }
+
   render() {
     let allBlogs = this.state.blogs.map((item, index) => {
       return (
